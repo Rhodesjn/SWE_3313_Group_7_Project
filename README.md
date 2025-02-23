@@ -2,5 +2,7 @@
 Group 7 project code for web Budgit application.
 
 Hello from Elvin
+Cats are cool dudes
+
 
 # Teehee merge conflict
