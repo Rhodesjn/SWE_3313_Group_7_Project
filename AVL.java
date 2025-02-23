@@ -10,7 +10,7 @@ public class AVL<E> extends BST<E> {
         //super() is implicitly called
     }
     /** Create a old_code.BST with a specified comparator */
-    public AVL(Comparator<E> c){
+    public AVL(Comparator<E> c){ //some change
         super(c);
     }
     /** Create an old_code.AVL tree from an array of objects*/
