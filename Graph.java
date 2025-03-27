@@ -1,7 +1,6 @@
-
 import java.util.*;
 //from textbook Listing 28.2 page 1028
-public interface Graph<V> {
+public interface Graph<V extends Number> {
     /** Return the number of vertices in the graph */
     public int getSize();
 

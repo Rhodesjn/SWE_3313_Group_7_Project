@@ -1,10 +1,10 @@
-package old_code;
-
 import java.util.Comparator;
-import java.util.ArrayList;
+//import javax.swing.tree.TreeNode;
+
+import java.util.ArrayList; 
 
 /** A V L (old_code.AVL)*/
-public class AVL<E> extends BST<E> {
+public class AVL<E extends Comparable<E>> extends BST<E>{
     /** Create an empty old_code.AVL tree using natural comparators*/
     public AVL(){
         //super() is implicitly called

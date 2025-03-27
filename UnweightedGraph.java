@@ -6,7 +6,7 @@
 
 import java.util.*;
 //from textbook Listing 28.4 page 1033
-public class UnweightedGraph<V> extends AbstractGraph<V> {
+public class UnweightedGraph<V extends Number> extends AbstractGraph<V>{
     /** Construct an empty graph */
     public UnweightedGraph() {
     }

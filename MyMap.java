@@ -1,4 +1,3 @@
-package old_code;
 // Name:         Justin Rhodes
 // Class:         CS 3305/ W01
 // Term:             Fall 2024
@@ -10,7 +9,7 @@ import java.util.Set;
 //I'm using the chapter 27 code from the GitHub link provided in assignment 8 as a template for my Hash Map
 
 public interface MyMap<K, V> {
-    // Remove all the entries from this map
+    // Remove all the entries from this map 
     public void clear();
 
     // Return true if the specified key is in the map

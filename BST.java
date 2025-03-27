@@ -1,15 +1,13 @@
-package old_code;
-
 import java.util.Comparator;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class BST<E> implements Tree<E> {
+public class BST<E extends Comparable<E>> implements Tree<E>{
     protected TreeNode<E> root;
     protected int size = 0;
     protected Comparator<E> c;
     /** create a default old_code.BST with a natural order comparator*/
-    public BST(){
+    public BST(){ 
         this.c = (e1, e2) -> ((Comparable<E>)e1).compareTo(e2);
     }
     /** Create a old_code.BST with a specified comparator*/
@@ -291,7 +289,9 @@ public class BST<E> implements Tree<E> {
         root = null;
         size = 0;
     }
+    /*
     public static void main (String[] args){
         BST<Integer> myBST = new BST<>();
     }
+    */
 }

@@ -1,7 +1,6 @@
-
 import java.util.*;
 // i got this code from the text book from Listing 29.2
-public class WeightedGraph<V> extends AbstractGraph<V> {
+public class WeightedGraph<V extends Number> extends AbstractGraph<V> {
     /** Construct an empty */
     public WeightedGraph() {
     }
@@ -15,7 +14,7 @@ public class WeightedGraph<V> extends AbstractGraph<V> {
     public WeightedGraph(int[][] edges, int numberOfVertices, Double[][] weights) {
         List<V> vertices = new ArrayList<>();
         for (int i = 0; i < numberOfVertices; i++)
-            vertices.add((V)(Integer.valueOf(i)));
+            vertices.add((V) safeCastToV(Integer.valueOf(i)));
 
         createWeightedGraph(vertices, edges, weights);
     }
@@ -29,9 +28,14 @@ public class WeightedGraph<V> extends AbstractGraph<V> {
     public WeightedGraph(List<WeightedEdge> edges, int numberOfVertices) {
         List<V> vertices = new ArrayList<>();
         for (int i = 0; i < numberOfVertices; i++)
-            vertices.add((V)(Integer.valueOf(i)));
+            vertices.add((V) safeCastToV(Integer.valueOf(i)));
 
         createWeightedGraph(vertices, edges);
+    }
+    //Safe casting Integers to V
+    @SuppressWarnings("unchecked")
+    private V safeCastToV(Number someInt){
+        return (V) (someInt);
     }
 
     /** Create adjacency lists from edge arrays */

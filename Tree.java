@@ -1,8 +1,6 @@
-package old_code;
-
 import java.util.Collection;
 
-public interface Tree<E> extends Collection<E> {
+public interface Tree<E extends Object> extends Collection<E>{
     /** Return true if the element is in the tree*/
     public boolean search(E e);
 
@@ -30,6 +28,7 @@ public interface Tree<E> extends Collection<E> {
     public default boolean isEmpty(){
         return this.size() == 0;
     }
+    @SuppressWarnings("unchecked")
     @Override
     public default boolean contains(Object e){
         return search((E)e);
@@ -38,6 +37,7 @@ public interface Tree<E> extends Collection<E> {
     public default boolean add(E e){
         return insert(e);
     }
+    @SuppressWarnings("unchecked")
     @Override
     public default boolean remove(Object e){
         return delete((E)e);

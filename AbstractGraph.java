@@ -1,10 +1,9 @@
-
 import java.util.*;
 //from textbook listing 28.3 page 1028
-public abstract class AbstractGraph<V> implements Graph<V> {
+public abstract class AbstractGraph<V extends Number>implements Graph<V> {
     protected List<V> vertices = new ArrayList<>(); // Store vertices
     protected List<List<Edge>> neighbors = new ArrayList<>(); // Adjacency List
-
+    //<V extends Number>
     /** Construct an empty graph */
     protected AbstractGraph() {
     }
@@ -26,7 +25,7 @@ public abstract class AbstractGraph<V> implements Graph<V> {
     /** Construct a graph for integer vertices 0, 1, 2 and edge list */
     protected AbstractGraph(List<Edge> edges, int numberOfVertices) {
         for (int i = 0; i < numberOfVertices; i++)
-            addVertex((V) (Integer.valueOf(i))); // vertices is {0, 1, ...}
+            addVertex(safeCastToV(Integer.valueOf(i))); // vertices is {0, 1, ...}
 
         createAdjacencyLists(edges, numberOfVertices);
     }
@@ -34,9 +33,13 @@ public abstract class AbstractGraph<V> implements Graph<V> {
     /** Construct a graph from integer vertices 0, 1, and edge array */
     protected AbstractGraph(int[][] edges, int numberOfVertices) {
         for (int i = 0; i < numberOfVertices; i++)
-            addVertex((V) (Integer.valueOf(i))); // vertices is {0, 1, ...}
+            addVertex(safeCastToV(Integer.valueOf(i))); // vertices is {0, 1, ...}
 
         createAdjacencyLists(edges, numberOfVertices);
+    }
+    @SuppressWarnings("unchecked")
+    private V safeCastToV(Number someInt){
+        return (V) (someInt);
     }
 
     /** Create adjacency lists for each vertex */

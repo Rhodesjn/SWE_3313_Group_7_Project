@@ -1,5 +1,3 @@
-
-
 // I got this code from the text book from listing 29.1
 public class WeightedEdge extends AbstractGraph.Edge implements Comparable<WeightedEdge> {
     public double weight; // The weight on edge (u, v)
