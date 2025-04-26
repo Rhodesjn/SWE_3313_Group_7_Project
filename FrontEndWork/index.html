@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budgit Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>[Budgit Logo]</h2>
+    <p>John Doe</p>
+    <nav>
+      <ul>
+        <li>User Settings</li>
+        <li>Create New Transaction</li>
+        <li>Change Past Transaction</li>
+        <li>Change Goal Date/Amount</li>
+        <li>View & Change Scheduled Transactions</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main">
+    <div class="balance-section">
+      <h1>Available Balance:</h1>
+      <h2>$1234.56</h2>
+    </div>
+
+    <div class="upcoming-transaction">
+      <h3>Upcoming Transaction:</h3>
+      <p>No scheduled transactions within 30 days</p>
+    </div>
+
+    <div class="goal-section">
+      <h3>Goal:</h3>
+      <p>$7890.00 in 123 days</p>
+      <div class="graph-placeholder">
+        Line graph representation of savings vs. goal
+      </div>
+    </div>
+
+    <div class="transaction-log">
+      <h3>Transactions Log:</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Amount</th>
+            <th>Notes</th>
+            <th>Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>+456.00</td>
+            <td>Job Payment</td>
+            <td>01/12/25</td>
+          </tr>
+          <tr>
+            <td>-78.00</td>
+            <td>Groceries</td>
+            <td>01/09/25</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
