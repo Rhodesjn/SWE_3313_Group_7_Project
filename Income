@@ -1,0 +1,11 @@
+// 1. One-time Income
+public class Income extends FinancialRecord {
+    public Income(double amount, Date date, String userId) {
+        super(amount, date, userId);
+    }
+
+    @Override
+    public double apply(double balance) {
+        return balance + amount;
+    }
+}
