@@ -1,4 +1,4 @@
-public class myTest {
+public class Test {
     public static void main(String[] args){
         //helloWorld myWorld = new helloWorld();
         helloWorld.helloLoop();
