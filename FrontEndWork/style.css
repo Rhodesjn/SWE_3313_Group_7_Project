@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 250px;
+    background-color: #eee;
+    padding: 20px;
+    height: 100vh;
+  }
+  
+  .sidebar h2, .sidebar p, .sidebar nav ul {
+    margin-bottom: 20px;
+  }
+  
+  .sidebar nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar nav ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .balance-section h1 {
+    font-size: 28px;
+  }
+  
+  .upcoming-transaction, .goal-section, .transaction-log {
+    margin-top: 30px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .graph-placeholder {
+    margin-top: 20px;
+    background: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+  }
+  
+  table, th, td {
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: center;
+  }
+  
