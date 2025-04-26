@@ -1,3 +1,6 @@
+import java.util.Date;
+import java.util.UUID;
+import java.util.Calendar;
 public abstract class RecurringRecord extends FinancialRecord {
     protected int intervalDays;  // e.g. 7 for weekly, 30 for monthly
 

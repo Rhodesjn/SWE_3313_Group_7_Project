@@ -1,7 +1,10 @@
 // 5. Goal: tracking a target amount by a due date
+import java.util.Date;
+import java.util.UUID;
+import java.util.Calendar;
 public abstract class Goal extends BaseEntity {
     protected double target;
-    protected Date   dueDate;
+    protected Date dueDate;
     protected String userId;
 
     public Goal(double target, Date dueDate, String userId) {

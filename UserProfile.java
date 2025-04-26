@@ -1,3 +1,6 @@
+import java.util.Date;
+import java.util.UUID;
+import java.util.Calendar;
 // 4. UserProfile: shared user settings & info
 public abstract class UserProfile extends BaseEntity {
     protected String name;
