@@ -1,3 +1,5 @@
+package ConcreteClasses;
+import AbstractClasses.UserProfile;
 
 public class NewUser extends UserProfile  {
 
