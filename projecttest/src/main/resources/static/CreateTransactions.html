@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Budgit Dashboard</title>
+  <link rel="stylesheet" href="CreateTransactionsStyle.css">
+</head>
+<body>
+
+  <div class="sidebar">
+    <h2>[Budgit Logo]</h2>
+    <p>John Doe</p>
+    <nav>
+      <ul>
+        <li>User Settings</li>
+        <li>Create New Transaction</li>
+        <li>Change Past Transaction</li>
+        <li>Change Goal Date/Amount</li>
+        <li>View & Change Scheduled Transactions</li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main">
+    <div class="Label">
+      <h1>Scheduled Transactions:</h1>
+    </div>
+
+    <div class="schedule-section">
+        <h3>Schedule a Transaction</h3>
+        <form id="TransactionForm">
+          <label for="Name">Transaction Name:</label>
+          <input type="text" name="transactionName" placeholder="Enter transaction name" required>
+      
+          <label for="transactionDate">Transaction Date:</label>
+          <input type="date" name="transactionDate" required>
+      
+          <label for="transactionAmount">Transaction Amount:</label>
+          <input type="number" name="transactionAmount" placeholder="Enter amount" required>
+      
+          <label for="transactionInterval">Interval (e.g., Weekly, Monthly):</label>
+          <input type="text" name="transactionInterval" placeholder="Enter interval" required>
+      
+          <button type="submit">Schedule Transaction</button>
+        </form>
+        <div id="scheduleResponse"></div>
+      </div>
+  </div>
+
+  <script src="CreateTransactionsScript.js"></script>
+
+</body>
+</html>
