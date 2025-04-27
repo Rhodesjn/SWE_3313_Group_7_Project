@@ -1,10 +1,8 @@
-
+package AbstractClasses;
+// package AbstractClasses;
 import java.util.Date;
 import java.util.List;
 import java.util.UUID;
-
-import ConcreteClasses.BaseEntity;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 // 4. UserProfile: shared user settings & info

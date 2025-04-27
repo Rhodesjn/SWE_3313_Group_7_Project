@@ -1,8 +1,7 @@
-
+package AbstractClasses;
 import java.util.Date;
 import java.util.UUID;
 
-import ConcreteClasses.BaseEntity;
 
 import java.util.Calendar;
 public abstract class FinancialRecord extends BaseEntity {

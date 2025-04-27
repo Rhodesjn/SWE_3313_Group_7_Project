@@ -1,4 +1,6 @@
-
+package ConcreteClasses;
+import AbstractClasses.FinancialRecord;
+import AbstractClasses.UserProfile;
 import java.util.Date;
 import java.util.UUID;
 import java.util.Calendar;
