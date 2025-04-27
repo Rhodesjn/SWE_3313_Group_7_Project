@@ -1,14 +1,12 @@
+
 import java.util.Date;
 import java.util.UUID;
 import java.util.Calendar;
 public abstract class RecurringRecord extends FinancialRecord {
     protected int intervalDays;  // e.g. 7 for weekly, 30 for monthly
 
-    public RecurringRecord(
-        double amount, Date startDate,
-        String userId, int intervalDays
-    ) {
-        super(amount, startDate, userId);
+    public RecurringRecord(double amount, Date startDate, int intervalDays, UserProfile user) {
+        super(amount, startDate, user);
         this.intervalDays = intervalDays;
     }
 
