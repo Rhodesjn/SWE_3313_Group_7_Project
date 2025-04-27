@@ -1,4 +1,10 @@
+package TestingMaterials;
 import java.util.Scanner;
+
+import FinancialRecord;
+import Income;
+import ConcreteClasses.NewUser;
+
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.text.ParseException;

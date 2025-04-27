@@ -1,3 +1,5 @@
+package ConcreteClasses;
+import UserProfile;
 
 public class NewUser extends UserProfile  {
 
