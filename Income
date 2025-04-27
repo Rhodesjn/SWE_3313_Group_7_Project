@@ -1,0 +1,85 @@
+// 1. One-time Income
+public class Income extends FinancialRecord {
+    public Income(double amount, Date date, String userId) {
+        super(amount, date, userId);
+    }
+
+    @Override
+    public double apply(double balance) {
+        return balance + amount;
+    }
+}
+
+
+
+// 2. One-time Expense
+public class Expense extends FinancialRecord {
+    public Expense(double amount, Date date, String userId) {
+        super(amount, date, userId);
+    }
+
+    @Override
+    public double apply(double balance) {
+        return balance - amount;
+    }
+}
+
+
+// 3. Scheduled (Recurring) Income
+public class ScheduledIncome extends RecurringRecord {
+    public ScheduledIncome(double amount, Date startDate, String userId, int intervalDays) {
+        super(amount, startDate, userId, intervalDays);
+    }
+
+    @Override
+    public double apply(double balance) {
+        return balance + amount;
+    }
+}
+
+
+
+// 4. Scheduled (Recurring) Expense
+public class ScheduledExpense extends RecurringRecord {
+    public ScheduledExpense(double amount, Date startDate, String userId, int intervalDays) {
+        super(amount, startDate, userId, intervalDays);
+    }
+
+    @Override
+    public double apply(double balance) {
+        return balance - amount;
+    }
+}
+
+
+
+
+// 5. Concrete User Profile
+public class AppUser extends UserProfile {
+    private String passwordHash;
+
+    public AppUser(String name, String email, String currency, String passwordHash) {
+        super(name, email, currency);
+        this.passwordHash = passwordHash;
+    }
+
+    @Override
+    public boolean validate() {
+        return email.contains("@") && !name.trim().isEmpty();
+    }
+
+    public String getPasswordHash() {
+        return passwordHash;
+    }
+}
+
+
+
+
+// 6. Concrete Savings Goal
+public class SavingsGoal extends Goal {
+    public SavingsGoal(double target, Date dueDate, String userId) {
+        super(target, dueDate, userId);
+    }
+    // no extra methods needed—use Goal.progress() as-is
+}
