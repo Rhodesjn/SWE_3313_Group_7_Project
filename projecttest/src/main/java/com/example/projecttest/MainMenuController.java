@@ -12,8 +12,8 @@ public class MainMenuController {
     public double getBalance() {
         return filler.getBalance();
     }
-    @GetMapping("/getUsername")
-    public String getUsername() {
-    return filler.getUserName();
-    }
+    // @GetMapping("/getUsername")
+    // public String getUsername() {
+    //     return filler.getUserName();
+    // }
 }
