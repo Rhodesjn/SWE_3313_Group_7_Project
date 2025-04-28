@@ -16,8 +16,8 @@ public class TransactionController {
     public int numberOfTransactions(){
         return scheduledTransactions.size();
     }
-    @GetMapping("/getUsername")
-    public String getUsername() {
-    return filler.getUserName();
+    @GetMapping("/getTransactionUsername")
+    public String getTransactionUsername() {
+    return filler.getTransactionUserName();
     }
 }
